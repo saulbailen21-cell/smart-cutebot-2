@@ -1,5 +1,5 @@
-let obstacle = 0
 basic.showIcon(IconNames.Heart)
+let obstacle = cuteBot.ultrasonic(cuteBot.SonarUnit.Centimeters)
 if (obstacle < 15) {
     cuteBot.stopcar()
 } else {
