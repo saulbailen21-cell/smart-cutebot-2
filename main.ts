@@ -1,4 +1,5 @@
 let obstacle = 0
+basic.showIcon(IconNames.Heart)
 if (obstacle < 15) {
     cuteBot.stopcar()
 } else {
