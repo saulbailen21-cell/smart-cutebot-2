@@ -1,10 +1,12 @@
 let obstacle = 0
 basic.showIcon(IconNames.Heart)
 basic.forever(function () {
+    obstacle = cuteBot.ultrasonic(cuteBot.SonarUnit.Centimeters)
     if (obstacle < 15) {
-        obstacle = cuteBot.ultrasonic(cuteBot.SonarUnit.Centimeters)
         cuteBot.stopcar()
     }
+})
+basic.forever(function () {
     cuteBot.colorLight(cuteBot.RGBLights.RGB_R, 0x0000ff)
     cuteBot.colorLight(cuteBot.RGBLights.RGB_L, 0xffff00)
     cuteBot.forward()
